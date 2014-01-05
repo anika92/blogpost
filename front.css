@@ -1,0 +1,84 @@
+﻿h1
+{
+
+font: Georgia, serif;
+border-bottom: 3px solid #cc9900;
+color: #996600;
+margin-left:11em;
+
+	
+}
+body {
+text-align:centre;
+	font-family: "Bitstream Vera Sans",Verdana,Arial,Helvetica,Sans,"Bitstream Vera Serif";
+	font-size: 1.5em;
+	width: 800px;
+	color: #996600;
+
+	
+}
+.menu{
+margin:4em;
+margin-left:14em;
+font-family:bold;
+font-size:1.5em;
+margin-top:0em;
+line-height:1.5em;
+
+}
+.login{margin-left:45em;
+margin-top:-5em;
+color:orange;
+list-style:none;
+letter-spacing:.2em;
+line-height:2em;
+border:3px solid orange;
+background-color:white;}
+ul{list-style:none;
+}
+li{color:orange;}
+#headermain{
+letter-spacing: 0.2em;
+	margin: 0px 80px 40px 40px;
+	padding: 15px 0px 0px 0px; 
+	font: normal 100% 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; 
+	
+	background-color:black;
+	
+
+}
+#title{ border-bottom:2px solid orange;
+font-size:1.5em;
+color:orange;
+margin:1em;}
+#wrap {
+	
+	height:1200px;
+	padding:2px;
+	}
+	
+#farouter1{
+ background: none repeat scroll 0 0 black ;
+    text-align:centre;
+    margin: 200px auto 10px;
+    margin-top:100px;
+    width: 1000px;
+	height:1500px;
+	padding:5px;
+	}
+	body{
+	
+	background:black url(daffodil.jpg) no-repeat scroll top left ;
+	width:80px;
+	height:1000px;
+	padding:1px;
+	
+	}
+
+#outer1{
+	
+	}
+	body{
+	color:white;
+	margin-top:90px;
+	}
