@@ -69,6 +69,11 @@ position:absolute;
 border:5px solid blue;
 color:navy;
 }
+td{padding:50px;}
+table { 
+    border-spacing: 20px;
+    border-collapse: separate;
+}
 body{
 margin:8em;
 margin-left:20em;
@@ -104,7 +109,7 @@ width:600px;
 }
 body{color:black;
 }
-
+#post{padding:50px;}
 #button{
 border-radius:10px;
 width:200px;

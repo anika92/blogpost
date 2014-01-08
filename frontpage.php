@@ -18,13 +18,13 @@
 
 <div id="sidebarleft">
 <fieldset style="width:40%"><legend>Login</legend>
-<table border="1">
+<table border="0">
     <form method="post" action="loginform.php" >
-        <table border="1">
+       
             <tr>
                 <td><label for="users_email">Email</label></td>
-                <td><input type="text" 
-                  name="users_email" id="users_email"></td>
+                <td id="post"input type="text" 
+                  name="users_email" post"id="users_email"></td>
             </tr>
             <tr>
                 <td><label for="users_pass">Password</label></td>
@@ -43,18 +43,20 @@
 
 <fieldset style="width:40%"><legend>Registration Form</legend>
 <table border="0">
+<table cellspacing="1" cellpadding="1">
 <tr>
 <form method="POST" action="index.php">
-<td>Name</td><td> <input type="text" name="name"></td>
+
+<td>Name</td><td><div id="post"><input type="text" name="name"></div></td>
 </tr><br/>
 <tr>
-<td>Email</td><td> <input type="text" name="email"></td>
+<td>Email</td><td> <input type="text" name="users_email"></td>
 </tr>
 <tr>
 <td>UserName</td><td> <input type="text" name="user"></td>
 </tr>
 <tr>
-<td>Password</td><td> <input type="password" name="pass"></td>
+<td>Password</td><td> <input type="password" name="users_pass"></td>
 </tr>
 <tr>
 <td>Confirm Password</td><td><input type="password" name="cpass"></td>

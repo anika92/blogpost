@@ -18,7 +18,7 @@ function NewUser()
     $password =  $_POST['pass'];
     $query = "INSERT INTO websiteusers (fullname,userName,email,pass) VALUES ('$fullname','$userName','$email','$password')";
     $data = mysql_query ($query)or die(mysql_error());
-    if($data)
+    if( mysql_query ($query)or die(mysql_error()))
     {
     echo "YOUR REGISTRATION IS COMPLETED...";
     }
