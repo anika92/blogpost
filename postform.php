@@ -1,66 +1,40 @@
-<html>
-<head>
 
-<link rel="stylesheet" type="text/css" href="post.css">
-<title>welcome to my blog</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>yoursite.com</title>
+    <link rel="stylesheet" type="text/css" href="home.css" />
+  </head>
+  <body>
 
-<h1> Welcome TO My Blog
-</h1>
+    <div id="container">
+      <div id="topheader">
+			  <br /><h1 id="theader">anikanstu.tk/myphp</h1>
+        <span id="theadert">Creativity makes creation</span>
+			</div>
+		  <div id="mainbanner">
+			  Try To Find Out Yourself
+			</div>
+			  
+<h2>ADD YOUR POST HERE</h2>
 
-</head>
-<body>
-<div id="farouter1">
-
-<div id="outer1">
-<div id="wrap">
-<div id="headermain">
-<head>
-
-<link rel="stylesheet" type="text/css" href="post.css">
-<title>welcome to my blog</title>
-
-<h1> Welcome TO My Blog
-</h1>
-
-</head>
-<body>
-<div id="farouter1">
-
-<div id="outer1">
-<div id="wrap">
-<div id="headermain">
-<head>
-
-<link rel="stylesheet" type="text/css" href="front.css">
-<title>welcome to my blog</title>
-
-<h1> Welcome TO My Blog
-</h1>
-
-</head>
-<body>
-<div id="farouter1">
-
-<div id="outer1">
-<div id="wrap">
-<div id="headermain">
-
-<body>
-
-<div id="post">
-<fieldset style="width:40%"><legend>ADD YOUR POST HERE</legend>
-<table border="0">
-<tr>
 <form method="POST" action="post.php">
-<td>title</td><td> <input type="text" name="name"></td>
-</tr><br/>
 
 <tr>
-<td>post</td><td> <input type="text" name="user"></td>
-</tr>
+
+<td>TiTle</td><div id="title"><td> <input type="text" name="title"></td>
+</tr><br/></div>
+
 <tr>
-<td>date</td><td> <input type="text" name="date"></td>
+<td>POST</td><div id="post"><td> <input type="text" name="post"></td></div>
 </tr>
+
+
+<tr>
+<td>DATE</td><td><div id="date"><input type="text" name="date"></td>
+</tr>
+</div>
 
 <tr>
 <td><input id="button" type="submit" name="submit" value="POST"></td>
@@ -73,5 +47,5 @@
 
 
 
-
+</body> 
 </html>
