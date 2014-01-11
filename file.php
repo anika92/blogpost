@@ -42,17 +42,18 @@ die('Blog post nof found.'); // post does not exist
 }
 else{
 // if post is not submitted display them all
-$query = mysql_query("SELECT title,post,date FROM members");
-while($row = mysql_fetch_array($query)){?>
-<div id="title"> <?echo $row['title'].'<br/>'.'<br/>';?></div>
-<?
+$query = mysql_query("SELECT * FROM members");
+while($row = mysql_fetch_array($query)){?><div class="intro">
+<?echo'<a href="show.php?id='.$row['id'].'">'.$row['title'].'</a><br>';?>
 
+<?
 echo $row['post'].'<br/>';
 echo $row["date_posted"];
-echo '<a href="?post='.$id.'">'.$title.'</a><br>';
-}
-}
 
+}
+}
 ?>
+	</div>
+
 	</body>
 	</html>
