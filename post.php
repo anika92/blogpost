@@ -20,8 +20,8 @@ function NewUser()
 {
     $fullname = $_POST['title'];
     $userName = $_POST['post'];
-    $Date=$_POST['date']
-    $query = "INSERT INTO post (title,post,date_posted) VALUES ('$fullname','$userName',$Date)";
+    $Date=$_POST['date'];
+    $query = "INSERT INTO members (title,post,date_posted) VALUES ('$fullname','$userName','$Date')";
     $data = mysql_query ($query)or die(mysql_error());
     if($data)
     {

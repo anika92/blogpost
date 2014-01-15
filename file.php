@@ -1,4 +1,5 @@
-﻿<html>
+﻿
+<html>
 <body>
 <?php
 require_once"dynamic.php";

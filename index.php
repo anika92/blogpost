@@ -1,6 +1,7 @@
-﻿<?php
+﻿<?session_start();?>
+<?php
 
- include"dynamic.php";
+ include"home.php";
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'anika_php');
 define('DB_USER','anika_html');
@@ -16,11 +17,12 @@ function NewUser()
     $userName = $_POST['user'];
     $email = $_POST['email'];
     $password =  $_POST['pass'];
-    $query = "INSERT INTO websiteusers (fullname,userName,email,pass) VALUES ('$fullname','$userName','$email','$password')";
+    $query = "INSERT INTO users (fullname,userName,email,pass) VALUES ('$fullname','$userName','$email','$password')";
     $data = mysql_query ($query)or die(mysql_error());
-    if( mysql_query ($query)or die(mysql_error()))
-    {
-    echo "YOUR REGISTRATION IS COMPLETED...";
+    if($data)
+    {?>
+    <meta http-equiv="refresh" content="0; url=successful.php"><?
+    
     }
 }
  
@@ -28,19 +30,23 @@ function SignUp()
 {
 if(!empty($_POST['user']))   //checking the 'user' name which is from Sign-Up.html, is it empty or have some text
 {
-    $query = mysql_query("SELECT * FROM websiteusers WHERE userName = '$_POST[user]'") or die(mysql_error());
- 
+    $query = mysql_query("SELECT * FROM users WHERE userName = '$_POST[user]' AND pass = '$_POST[pass]'") or die(mysql_error());
 
- if($row = mysql_fetch_array($query) or die(mysql_error()))
-    {
-    echo "SORRY...YOU ARE ALREADY REGISTERED USER..";
+
+
+ if(!$row = mysql_fetch_array($query) )
+    { 
+     
+    newuser();
+    
     }
-    else
-    {    
-     newuser();
-    }
+    else{?>
+    <meta http-equiv="refresh" content="0; url=registered.php"><?
+    
  }
+   }
 }
+ 
 if(isset($_POST['submit']))
 {
     SignUp();

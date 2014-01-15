@@ -4,11 +4,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>yoursite.com</title>
-    <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="stylesheet" type="text/css" href="front.css" />
   </head>
   <body>
 
-    <div id="container">
+    <div id="header">
       <div id="topheader">
 			  <br /><h1 id="theader">anikanstu.tk/myphp</h1>
         <span id="theadert">Creativity makes creation</span>
@@ -18,15 +18,17 @@
 			</div>
 			  
 
-			<div id="allpost">
+			<div id="container">
 			<h2>Welcome To My Blog</h2>
-			<?require_once "file.php";?></div>
+			<?require_once "file.php";?>
 			
+			</div>
 			
-			<div id="right">
 		
-			<div id="nav">
-			  <ul>
+			<div id="sidebar">
+		
+			<div id="login">
+			  
 				<?
 	
 	$logout='logoutform.php';
@@ -48,7 +50,7 @@ Password:<input type="password" name="users_pass"/></br>
 		 <input type="submit" name="submit" value="Login"/>
 		 
 </form>
-
+</table>
    <?
                 }
                  else{
@@ -58,13 +60,11 @@ Password:<input type="password" name="users_pass"/></br>
                 }
 	
                 ?>
-                </ul>
+                
 			</div>
-			
+			</div>
 			   <div class="authorbox">
-	 
-	      
-	        <div class="topinfo">
+	<div class="topinfo">
 	 <div class="left">
 	                <p>Author: <strong>Anika Shahabuddin</strong></p>
 	            </div>
