@@ -1,12 +1,14 @@
 ﻿
+
+<?session_start();?>
+
 <html>
-<body>
-<?php
-require_once"dynamic.php";
-$con=mysql_connect("localhost","root","");
+<body>﻿<?php
+include_once"home.php";
+$con=mysql_connect("localhost","anika_html","myfirstweb2323");
 if(!$con)
 die('could not connect:'. mysql_error());
-mysql_select_db('tutorial',$con);
+mysql_select_db('anika_php',$con);
 
 mysql_query("SET CHARACTER SET utf8",$con);                                                     //Extra for Bangla
 mysql_query("SET SESSION collation_connection='utf8_general_ci'",$con) ;       // Extra for Bangla;
@@ -30,9 +32,10 @@ $post = (int)$post; // and the int function, which replace every
 $post = mysql_real_escape_string($post); // final sqli defense
 
 // final part
-$query = mysql_query("SELECT title FROM members WHERE id=$post LIMIT 1");
+$query = mysql_query("SELECT title  FROM post WHERE id=$post LIMIT 1");
 while($row = mysql_fetch_array($query)){
 echo $row['title'];
+echo $row['description'];
 }
 
 }
@@ -43,18 +46,28 @@ die('Blog post nof found.'); // post does not exist
 }
 else{
 // if post is not submitted display them all
-$query = mysql_query("SELECT * FROM members");
+$query = mysql_query("SELECT * FROM post ");
 while($row = mysql_fetch_array($query)){?><div class="intro">
-<?echo'<a href="show.php?id='.$row['id'].'">'.$row['title'].'</a><br>';?>
+<?echo'<a href="show.php?id='.$row['id'].'">'.$row['title'].'</a><br/>';
+echo date('Y-m-d').'<br/>';
+if(strlen($row['description']) > 200){
+echo substr($row['description'],0,1000).'... <a href="show.php?id='.$row['id'].'">Read More</a>';
+}
+else{
+//no point of having read more button here cuz there nothing more to read :)
+echo $row['description'];
+}
 
+
+	   ?>
+	   
+</div>
 <?
-echo $row['post'].'<br/>';
-echo $row["date_posted"];
-
 }
 }
 ?>
-	</div>
-
-	</body>
-	</html>
+<div id="footer">
+		  Copyright 2014  - Designed by Anika
+		</div>
+</body>
+</html>
