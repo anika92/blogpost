@@ -11,12 +11,12 @@ $row=mysql_fetch_array($result);//ma return row sa database
 		
 		if ($count > 0){//kun may tyakto sa query e execute yah ang code sa dalom
 		session_start();//para mag start ang session
-		$_SESSION['userID']=$row['userID'];
+		$_SESSION['userID']="1";
 
 		header('location:index.php');
 		}else{
-		header('location:frontpage.php');
-		}
+		header('location:bad login.php');
+		} 
 }
 ?>
 
